@@ -40,8 +40,8 @@ all: default
 
 $(BUILD_OBJ_DIR)/%.o: %.c
     @mkdir -p $(dir $@)
-    @$(CC)  $(CFLAGS) -c $< -o $@
-    @echo "CC $<"
+	@$(CC)  $(CFLAGS) -c $< -o $@
+	@echo "CC $<"
 
 default: $(TARGET)
 	@mkdir -p $(dir $(BUILD_BIN_DIR)/)
