@@ -32,4 +32,3 @@ jobs:
           name: jetkvm_native
           path: build/bin/jetkvm_native
           retention-days: 7
-

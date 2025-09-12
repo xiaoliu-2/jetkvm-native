@@ -9,7 +9,7 @@
 #include "rk_common.h"
 #include "ctrl.h"
 #include "video.h"
-#include "screen.h"
+
 #include <sys/ioctl.h>
 #include <linux/nbd.h>
 
@@ -76,7 +76,6 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    init_lvgl();
 
     if (connect_ctrl_client("/var/run/jetkvm_ctrl.sock") != 0)
     {
@@ -85,9 +84,6 @@ int main(int argc, char **argv)
     }
     start_ctrl_loop();
 
-    printf("creating screen_thread\n");
-    pthread_t screen_thread;
-    pthread_create(&screen_thread, NULL, run_lvgl_loop, NULL);
 
     if (RK_MPI_SYS_Init() != RK_SUCCESS)
     {
