@@ -2,7 +2,7 @@ name: Build JetKVM Native
 on: workflow_dispatch
 jobs:
   build:
-    runs-on: buildjet-16vcpu-ubuntu-2204 
+    runs-on: ubuntu-latest
     name: Build
     steps:
       - name: Checkout
