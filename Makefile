@@ -10,11 +10,10 @@ RK_APP_MEDIA_LIBS_PATH :=  $(RK_MEDIA_OUTPUT)/lib
 
 RK_APP_LDFLAGS = -L $(RK_APP_MEDIA_LIBS_PATH) -lpthread -lrockit -lrockchip_mpp  -lrga
 
-LVGL_DIR_NAME 	?= lvgl
-LVGL_DIR 		?= .
+
 CC = $(RK_APP_CROSS)-gcc
 
-CFLAGS = -I $(RK_MEDIA_INCLUDE_PATH) -I $(RK_MEDIA_INCLUDE_PATH)/libdrm -I$(LVGL_DIR)/ -I./ui
+CFLAGS = -I $(RK_MEDIA_INCLUDE_PATH) -I $(RK_MEDIA_INCLUDE_PATH)/libdrm
 LDFLAGS ?=  -L $(RK_APP_MEDIA_LIBS_PATH) -lpthread -lrockit -lrockchip_mpp -lrga -lm -O3 -g0
 BIN 			= jetkvm_native
 
