@@ -38,6 +38,10 @@ TARGET 			= $(addprefix $(BUILD_OBJ_DIR)/, $(patsubst ./%, %, $(OBJS)))
 
 all: default
 
+$(BUILD_OBJ_DIR)/%.o: %.c
+    @mkdir -p $(dir $@)
+    @$(CC)  $(CFLAGS) -c $< -o $@
+    @echo "CC $<"
 
 default: $(TARGET)
 	@mkdir -p $(dir $(BUILD_BIN_DIR)/)
