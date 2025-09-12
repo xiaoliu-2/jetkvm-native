@@ -9,9 +9,9 @@
 #include <fcntl.h>
 #include "frozen.h"
 #include "video.h"
-#include "screen.h"
+
 #include "edid.h"
-#include "lvgl/lvgl.h"
+
 
 typedef struct
 {
