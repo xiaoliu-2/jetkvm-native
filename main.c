@@ -10,7 +10,6 @@
 #include "ctrl.h"
 #include "video.h"
 #include "screen.h"
-
 #include <sys/ioctl.h>
 #include <linux/nbd.h>
 
