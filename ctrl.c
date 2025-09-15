@@ -9,7 +9,7 @@
 #include <fcntl.h>
 
 #include "video.h"
-#include "edid.h"
+
 
 typedef struct
 {
