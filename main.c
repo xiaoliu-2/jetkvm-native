@@ -76,14 +76,12 @@ int main(int argc, char **argv)
         return 0;
     }
 
-
     if (connect_ctrl_client("/var/run/jetkvm_ctrl.sock") != 0)
     {
         printf("can not connect to ctrl server\n");
         return -1;
     }
     start_ctrl_loop();
-
 
     if (RK_MPI_SYS_Init() != RK_SUCCESS)
     {
