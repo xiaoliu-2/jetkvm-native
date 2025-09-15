@@ -7,7 +7,7 @@
 #include <pthread.h>
 #include <stdint.h>
 #include <fcntl.h>
-#include "frozen.h"
+
 #include "video.h"
 #include "edid.h"
 
